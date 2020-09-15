@@ -212,10 +212,10 @@ cd components/
 #设置环境变量
 if [ ! -f "/etc/profile.d/bigdataenv.sh" ]; 
 	then
-		echo "/etc/profile.d/bigdataenv.sh，创建此文件"
-		touch /etc/profile.d/bigdataenv.sh && echo "#!/bin/sh" >> /etc/profile.d/bigdataenv.sh && echo "创建bigdataenv.sh成功"
+	
+		touch /etc/profile.d/bigdataenv.sh 
 	else
-		echo "/etc/profile.d/bigdataenv.sh已存在，跳过创建"
+		rm -f /etc/profile.d/bigdataenv.sh && touch /etc/profile.d/bigdataenv.sh 
 fi
 echo -e "export JAVA_HOME=/opt/module/jdk-11.0.8\n" >> /etc/profile.d/bigdataenv.sh
 echo -e "export MAVEN_HOME=/opt/module/maven-3.6.3\n" >> /etc/profile.d/bigdataenv.sh
@@ -227,9 +227,10 @@ echo -e "export KAFKA_HOME=/opt/module/kafka_2.13-2.6.0\n" >> /etc/profile.d/big
 echo -e "export HBASE_HOME=/opt/module/hbase-2.3.1\n" >> /etc/profile.d/bigdataenv.sh
 echo -e "export PHN_HOME=/opt/module/phoenix-5.0.0\n" >> /etc/profile.d/bigdataenv.sh
 echo -e "export SH_HOME=/opt/module/scripts\n" >> /etc/profile.d/bigdataenv.sh
-echo -e "export PATH=$PATH:${JAVA_HOME}/bin:${MAVEN_HOME}/bin:${HADOOP_HOME}/bin:${HADOOP_HOME}/sbin:${ZK_HOME}/bin:${HIVE_HOME}/bin:${FLUME_HOME}/bin:${KAFKA_HOME}/bin:${HBASE_HOME}/bin:${PHN_HOME}/bin:$SH_HOME\n" >> /etc/profile.d/bigdataenv.sh
+echo -e "export PATH=\$PATH:\${JAVA_HOME}/bin:\${MAVEN_HOME}/bin:\${HADOOP_HOME}/bin:\${HADOOP_HOME}/sbin:\${ZK_HOME}/bin:\${HIVE_HOME}/bin:\${FLUME_HOME}/bin:\${KAFKA_HOME}/bin:\${HBASE_HOME}/bin:\${PHN_HOME}/bin:\$SH_HOME\n" >> /etc/profile.d/bigdataenv.sh
 echo "将环境变量设置写入/etc/profile.d/bigdataenv.sh"
-source /etc/profile && source ~/.bashrc && echo "刷新环境变量成功"
+source /etc/profile 
+echo "刷新环境变量成功"
 
 #修改sshd配置:服务端不自动断开,允许root登录
 sed -i 's/#LoginGraceTime 2m/LoginGraceTime 0/' /etc/ssh/sshd_config
