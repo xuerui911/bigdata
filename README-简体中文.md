@@ -21,5 +21,4 @@
 # 如果需要使用其他版本的组件，请自行更改shell脚本中的下载地址和目录
 # --------------------------------------------------------------------
 
-# 实验性: 使用docker搭建大数据集群
-	 [https://github.com/xuerui911/docker-bigdata](https://github.com/xuerui911/docker-bigdata)
+# 实验性: [使用docker搭建大数据集群](https://github.com/xuerui911/docker-bigdata)
