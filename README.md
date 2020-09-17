@@ -1,6 +1,9 @@
 # BigdataEnv
   
-  Suitable for traditional environments, such as CloudServers or VirtualMachines
+  Suitable for traditional environments, such as CloudServers or VMWare or VirtualBox
+  
+# OneKeyInstall
+	git clone https://github.com/xuerui911/bigdata && cd bigdata && sh BigdataOneKeyInstall.sh
 
 # 各组件版本：
     JDK 11.0.8
@@ -14,5 +17,9 @@
 		KafkaEagle 2.0.1
 		HBase 2.3.1
 		Phoenix 5.0.0
-# --------------------------------------------------------------------
+
 # 如需使用其它版本组件，请自行更改shell脚本中的下载地址及目录
+# --------------------------------------------------------------------
+
+# Experimental: Use docker containers to build big data clusters
+	https://github.com/xuerui911/docker-bigdata
