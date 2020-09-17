@@ -130,7 +130,7 @@ cd components/
 			echo "/opt/module/kafka-eagle-2.0.1不存在,查看kafka-eagle-2.0.1二进制包是否存在"
 			if [ ! -f "kafka-eagle-2.0.1.tar.gz" ]; 
 				then
-					echo "kafka-eagle-2.0.1二进制包不存在，从清华源下载并解压至/opt/module/"
+					echo "kafka-eagle-2.0.1二进制包不存在，从github下载并解压至/opt/module/"
 					wget -c -O kafka-eagle-2.0.1.tar.gz https://github.com/smartloli/kafka-eagle-bin/archive/v2.0.1.tar.gz
 				else
 					echo "kafka-eagle-2.0.1二进制包已存在，解压至/opt/module/"
@@ -212,7 +212,6 @@ cd components/
 #设置环境变量
 if [ ! -f "/etc/profile.d/bigdataenv.sh" ]; 
 	then
-	
 		touch /etc/profile.d/bigdataenv.sh 
 	else
 		rm -f /etc/profile.d/bigdataenv.sh && touch /etc/profile.d/bigdataenv.sh 
