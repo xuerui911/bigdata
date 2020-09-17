@@ -1,3 +1,4 @@
+#[简体中文README](https://github.com/xuerui911/bigdata/blob/master/README-%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87.md)
 # BigdataEnv
   
   Suitable for traditional environments, such as CloudServers or VMWare or VirtualBox
