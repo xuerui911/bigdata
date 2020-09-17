@@ -22,5 +22,6 @@ Phoenix 5.0.0
 # If you need to use other versions of components, please change the download address and directory in the shell script by yourself
 # --------------------------------------------------------------------
 
-# Experimental: Use docker containers to build big data clusters
-	https://github.com/xuerui911/docker-bigdata
+# Experimental: 
+	[Use docker containers to build big data clusters](https://github.com/xuerui911/docker-bigdata)
+	
