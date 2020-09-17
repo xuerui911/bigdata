@@ -22,7 +22,7 @@ cd components/
 	if [ ! -d "/opt/module/maven-3.6.3" ]; 
 		then
 			echo "/opt/module/maven-3.6.3不存在,查看maven-3.6.3二进制包是否存在"
-						if [ ! -f "apache-maven-3.6.3-bin.tar.gz" ]; 
+						if [ ! -f "maven-3.6.3.tar.gz" ]; 
 							then
 								echo "maven-3.6.3二进制包不存在，从清华源下载并解压至/opt/module/"
 								wget -c -O maven-3.6.3.tar.gz https://mirrors.tuna.tsinghua.edu.cn/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
@@ -184,7 +184,7 @@ cd components/
 	if [ ! -d "/opt/module/jdk-11.0.8" ]; 
 		then
 			echo "/opt/module/jdk-11.0.8不存在,查看jdk-11.0.8二进制包是否存在"
-			if [ ! -f "apache-jdk-11.0.8.tar.gz" ]; 
+			if [ ! -f "jdk-11.0.8.tar.gz" ]; 
 				then
 					echo -e "jdk-11.0.8二进制包不存在，下载并解压至/opt/module/\n（现在Oracle官网必须登录才给临时下载链接，这是我用工具生成的个人Onedrive直链，可能会失效）"
 					wget -c -O jdk-11.0.8.tar.gz https://onedrive.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBckxZM25PVHJEM1ZsNWdLelN0RU1zWmdSWHMzSEE/ZT1PNUNXeDI=.tar.gz
