@@ -22,7 +22,7 @@ cd components/
 	if [ ! -d "/opt/module/maven-3.6.3" ]; 
 		then
 			echo "/opt/module/maven-3.6.3不存在,查看maven-3.6.3二进制包是否存在"
-						if [ ! -f "apache-maven-3.6.3-bin.tar.gz" ]; 
+						if [ ! -f "maven-3.6.3.tar.gz" ]; 
 							then
 								echo "maven-3.6.3二进制包不存在，从清华源下载并解压至/opt/module/"
 								wget -c -O maven-3.6.3.tar.gz https://mirrors.tuna.tsinghua.edu.cn/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
@@ -130,7 +130,7 @@ cd components/
 			echo "/opt/module/kafka-eagle-2.0.1不存在,查看kafka-eagle-2.0.1二进制包是否存在"
 			if [ ! -f "kafka-eagle-2.0.1.tar.gz" ]; 
 				then
-					echo "kafka-eagle-2.0.1二进制包不存在，从清华源下载并解压至/opt/module/"
+					echo "kafka-eagle-2.0.1二进制包不存在，从github下载并解压至/opt/module/"
 					wget -c -O kafka-eagle-2.0.1.tar.gz https://github.com/smartloli/kafka-eagle-bin/archive/v2.0.1.tar.gz
 				else
 					echo "kafka-eagle-2.0.1二进制包已存在，解压至/opt/module/"
