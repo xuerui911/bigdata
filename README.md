@@ -23,5 +23,5 @@
 # --------------------------------------------------------------------
 
 # Experimental: 
-	[Use docker containers to build big data clusters](https://github.com/xuerui911/docker-bigdata)
+	[Use docker containers to build big data clusters] (https://github.com/xuerui911/docker-bigdata)
 	
