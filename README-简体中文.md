@@ -22,4 +22,4 @@
 # --------------------------------------------------------------------
 
 # 实验性: 使用docker搭建大数据集群
-	 https://github.com/xuerui911/docker-bigdata
+	 [https://github.com/xuerui911/docker-bigdata](https://github.com/xuerui911/docker-bigdata)
