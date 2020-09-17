@@ -1,3 +1,6 @@
+/components/
+tmp/
+
 # Compiled class file
 *.class
 
