@@ -206,7 +206,8 @@ cd components/
 	fi
 		yum -y install scala-2.13.3.rpm 
 	
-
+#Spark-3.0.1
+wget -c https://mirrors.tuna.tsinghua.edu.cn/apache/spark/spark-3.0.1/spark-3.0.1-bin-hadoop3.2.tgz
 
 
 #设置环境变量
