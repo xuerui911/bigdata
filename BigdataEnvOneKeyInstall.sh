@@ -209,6 +209,9 @@ cd components/
 #Spark-3.0.1
 wget -c https://mirrors.tuna.tsinghua.edu.cn/apache/spark/spark-3.0.1/spark-3.0.1-bin-hadoop3.2.tgz
 
+#AZKABAN-3.90.0
+wget -c -O azkaban-3.90.0.tar.gz https://github.com/azkaban/azkaban/archive/3.90.0.tar.gz
+#wget -c -O azkaban-3.90.0.tar.gz https://download.fastgit.org/azkaban/azkaban/archive/3.90.0.tar.gz
 
 #设置环境变量
 if [ ! -f "/etc/profile.d/bigdataenv.sh" ]; 
