@@ -144,20 +144,20 @@ cd components/
 	
 
 #HBase	
-	if [ ! -d "/opt/module/hbase-2.3.1" ]; 
+	if [ ! -d "/opt/module/hbase-2.3.3" ]; 
 		then
-			echo "/opt/module/hbase-2.3.1不存在,查看hbase-2.3.1二进制包是否存在"
-			if [ ! -f "hbase-2.3.1.tar.gz" ]; 
+			echo "/opt/module/hbase-2.3.3不存在,查看hbase-2.3.3二进制包是否存在"
+			if [ ! -f "hbase-2.3.3.tar.gz" ]; 
 				then
-					echo "hbase-2.3.1二进制包不存在，从清华源下载并解压至/opt/module/"
-					wget -c -O hbase-2.3.1.tar.gz https://mirrors.tuna.tsinghua.edu.cn/apache/hbase/2.3.1/hbase-2.3.1-bin.tar.gz
+					echo "hbase-2.3.3二进制包不存在，从清华源下载并解压至/opt/module/"
+					wget -c -O hbase-2.3.3.tar.gz https://mirrors.tuna.tsinghua.edu.cn/apache/hbase/2.3.3/hbase-2.3.3-bin.tar.gz
 				else
-					echo "hbase-2.3.1二进制包已存在，解压至/opt/module/"
+					echo "hbase-2.3.3二进制包已存在，解压至/opt/module/"
 			fi
-				tar -zxf hbase-2.3.1.tar.gz -C /opt/module && echo "解压成功"
-				mv /opt/module/apache-hbase-2.3.1-bin /opt/module/hbase-2.3.1 && echo "重命名/opt/module/apache-hbase-2.3.1-bin为/opt/module/hbase-2.3.1"
+				tar -zxf hbase-2.3.3.tar.gz -C /opt/module && echo "解压成功"
+				mv /opt/module/apache-hbase-2.3.3-bin /opt/module/hbase-2.3.3 && echo "重命名/opt/module/apache-hbase-2.3.3-bin为/opt/module/hbase-2.3.3"
 		else
-			echo "/opt/module/hbase-2.3.1已存在，跳过hbase-2.3.1的下载及解压"
+			echo "/opt/module/hbase-2.3.3已存在，跳过hbase-2.3.3的下载及解压"
 	fi	
 		
 
