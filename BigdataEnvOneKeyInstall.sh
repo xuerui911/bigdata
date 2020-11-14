@@ -258,7 +258,7 @@ cd /opt/software
 					echo "phoenix-5.0.0二进制包已存在，解压至/opt/module/"
 			fi
 				tar -zxf phoenix-5.0.0.tar.gz -C /opt/module && echo "解压成功"
-				mv /opt/module/apache-phoenix-5.0.0-bin /opt/module/phoenix-5.0.0 && echo "重命名/opt/module/apache-phoenix-5.0.0-bin为/opt/module/phoenix-5.0.0"
+				mv /opt/module/apache-phoenix-5.0.0-HBase-2.0-bin /opt/module/phoenix-5.0.0 && echo "重命名/opt/module/apache-phoenix-5.0.0-HBase-2.0-bin为/opt/module/phoenix-5.0.0"
 		else
 			echo "/opt/module/phoenix-5.0.0已存在，跳过phoenix-5.0.0的下载及解压"
 	fi	
