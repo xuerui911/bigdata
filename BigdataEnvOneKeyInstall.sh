@@ -210,20 +210,20 @@ cd components/
 
 
 #Kafka-eagle	
-	if [ ! -d "/opt/module/kafka-eagle-2.0.1" ]; 
+	if [ ! -d "/opt/module/kafka-eagle-2.0.2" ]; 
 		then
-			echo "/opt/module/kafka-eagle-2.0.1不存在,查看kafka-eagle-2.0.1二进制包是否存在"
-			if [ ! -f "kafka-eagle-2.0.1.tar.gz" ]; 
+			echo "/opt/module/kafka-eagle-2.0.2不存在,查看kafka-eagle-2.0.2二进制包是否存在"
+			if [ ! -f "kafka-eagle-2.0.2.tar.gz" ]; 
 				then
-					echo "kafka-eagle-2.0.1二进制包不存在，从github下载并解压至/opt/module/"
-					wget -c -O kafka-eagle-2.0.1.tar.gz https://github.com/smartloli/kafka-eagle-bin/archive/v2.0.1.tar.gz
+					echo "kafka-eagle-2.0.2二进制包不存在，从github下载并解压至/opt/module/"
+					wget -c -O kafka-eagle-2.0.2.tar.gz https://github.com/smartloli/kafka-eagle-bin/archive/v2.0.2.tar.gz
 				else
-					echo "kafka-eagle-2.0.1二进制包已存在，解压至/opt/module/"
+					echo "kafka-eagle-2.0.2二进制包已存在，解压至/opt/module/"
 			fi
-				tar -zxf kafka-eagle-2.0.1.tar.gz -C /opt/module && echo "解压成功"
-				mv /opt/module/apache-kafka-eagle-2.0.1-bin /opt/module/kafka-eagle-2.0.1 && echo "重命名/opt/module/apache-kafka-eagle-2.0.1-bin为/opt/module/kafka-eagle-2.0.1"
+				tar -zxf kafka-eagle-2.0.2.tar.gz -C /opt/module && echo "解压成功"
+				mv /opt/module/apache-kafka-eagle-2.0.2-bin /opt/module/kafka-eagle-2.0.2 && echo "重命名/opt/module/apache-kafka-eagle-2.0.2-bin为/opt/module/kafka-eagle-2.0.2"
 		else
-			echo "/opt/module/kafka-eagle-2.0.1已存在，跳过kafka-eagle-2.0.1的下载及解压"
+			echo "/opt/module/kafka-eagle-2.0.2已存在，跳过kafka-eagle-2.0.2的下载及解压"
 	fi	
 
 	
