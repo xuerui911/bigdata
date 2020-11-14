@@ -298,7 +298,7 @@ echo -e "export PHN_HOME=/opt/module/phoenix-5.0.0\n" >> /etc/profile.d/bigdatae
 echo -e "export PATH=\$PATH:\${JAVA_HOME}/bin:\${MAVEN_HOME}/bin:\${HADOOP_HOME}/bin:\${HADOOP_HOME}/sbin:\${ZK_HOME}/bin:\${HIVE_HOME}/bin:\${FLUME_HOME}/bin:\${KAFKA_HOME}/bin:\${HBASE_HOME}/bin:\${PHN_HOME}/bin" >> /etc/profile.d/bigdataenv.sh
 #echo -e "export PATH=\$PATH:\$SH_HOME\n" >> /etc/profile.d/bigdataenv.sh
 echo "将环境变量设置写入/etc/profile.d/bigdataenv.sh"
-source /etc/profile 
+source /etc/profile.d/bigdataenv.sh
 echo "刷新环境变量成功"
 
 #修改sshd配置:服务端不自动断开,允许root登录
@@ -309,4 +309,5 @@ sed -i 's/#UseDNS yes/UseDNS no/' /etc/ssh/sshd_config
 sed -i 's/#UseDNS no/UseDNS no/' /etc/ssh/sshd_config
 echo "修改sshd配置:服务端不自动断开,允许root登录"
 systemctl restart sshd && echo "重启sshd服务成功"
-echo "全部安装完成"
+echo "全部安装完成，尝试运行hadoop version查看环境变量是否生效"
+hadoop version && echo "成功"
