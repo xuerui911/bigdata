@@ -7,16 +7,16 @@
 				echo "/opt/module已存在，跳过创建"
 	fi
 
-#创建临时存储目录
-	if [ ! -d "components" ]; 	
+#安装包存储目录
+	if [ ! -d "/opt/software" ]; 	
 			then
-				echo "当前目录下不存在components目录，创建components目录"  && mkdir components/
+				echo "/opt/software不存在，创建/opt/software目录"  && mkdir -p /opt/software
 			else
-				echo "当前目录下已存在components目录"	
+				echo "/opt/software已存在，跳过创建"	
 	fi
 
 #下载并解压各组件
-cd components/
+cd /opt/software
 
 #JDK11最新版11.0.9（现在Oracle官网必须登录才给临时下载链接，这是我个人onedrive用工具生成的直链，可能会失效）	
 #	if [ ! -d "/opt/module/jdk-11.0.9" ]; 
