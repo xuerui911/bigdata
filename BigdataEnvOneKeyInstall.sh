@@ -24,7 +24,7 @@ cd /opt/software
 #			echo "/opt/module/jdk-11.0.9不存在,查看jdk-11.0.9二进制包是否存在"
 #			if [ ! -f "jdk-11.0.9.tar.gz" ]; 
 #				then
-#					echo -e "jdk-11.0.9二进制包不存在，下载并解压至/opt/module/\n（现在Oracle官网必须登录才给临时下载链接，这是我用工具生成的个人Onedrive直链，可能会失效）"
+#					echo -e "jdk-11.0.9二进制包不存在，下载并解压至/opt/module/\n（现在Oracle官网必须登录才给临时下载链接，这是我用工具生成的个人Onedrive直链，可能会失效，此处国内可能有点慢，耐心等待）"
 #					wget -c -O jdk-11.0.9.tar.gz https://onedrive.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBckxZM25PVHJEM1ZyYmN2VXY2SFVrZGJmSmEyLWc/ZT1ZTU9LUks=.gz
 #				else
 #					echo "jdk-11.0.9二进制包已存在，解压至/opt/module/"
@@ -40,7 +40,7 @@ cd /opt/software
 			echo "/opt/module/jdk1.8.0_271不存在,查看jdk1.8.0_271二进制包是否存在"
 			if [ ! -f "jdk1.8.0_271.tar.gz" ]; 
 				then
-					echo -e "jdk1.8.0_271二进制包不存在，下载并解压至/opt/module/\n（现在Oracle官网必须登录才给临时下载链接，这是我用工具生成的个人Onedrive直链，可能会失效）"
+					echo -e "jdk1.8.0_271二进制包不存在，下载并解压至/opt/module/\n（现在Oracle官网必须登录才给临时下载链接，这是我用工具生成的个人Onedrive直链，可能会失效，此处国内可能有点慢，耐心等待）"
 					wget -c -O jdk1.8.0_271.tar.gz https://onedrive.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBckxZM25PVHJEM1ZyYmNrb3NXdW1tR1NoSmtLcHc/ZT1DY2M3d3I=.gz
 				else
 					echo "jdk1.8.0_271二进制包已存在，解压至/opt/module/"
@@ -53,7 +53,7 @@ cd /opt/software
 #Scala-2.12.12
 	if [ ! -f "scala-2.12.12.rpm" ];
 		then
-			echo "从Scala官网下载rpm包并安装" && wget https://downloads.lightbend.com/scala/2.12.12/scala-2.12.12.rpm 									
+			echo "从Scala官网下载rpm包并安装，此处国内可能有点慢，耐心等待" && wget https://downloads.lightbend.com/scala/2.12.12/scala-2.12.12.rpm 									
 		else
 			echo "Scala rpm包已存在，直接安装" 
 	fi
