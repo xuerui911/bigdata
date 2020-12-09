@@ -50,24 +50,53 @@ cd /opt/software
 			echo "/opt/module/jdk1.8.0_271已存在，跳过jdk1.8.0_271的下载及解压"
 	fi	
 
-#Scala-2.12.12
-	if [ ! -f "scala-2.12.12.rpm" ];
+#SCALA-2.11.12
+	if [ ! -d "/opt/module/scala-2.11.12" ]; 
 		then
-			echo "从Scala官网下载rpm包并安装，此处国内可能有点慢，耐心等待" && wget https://downloads.lightbend.com/scala/2.12.12/scala-2.12.12.rpm 									
+			echo "/opt/module/scala-2.11.12不存在,查看scala-2.11.12二进制包是否存在"
+						if [ ! -f "scala-2.11.12.tgz" ]; 
+							then
+								echo "scala-2.11.12二进制包不存在，从scala-lang.org(lightbend.com)下载并解压至/opt/module/"
+								wget -c https://downloads.lightbend.com/scala/2.11.12/scala-2.11.12.tgz
+							else
+								echo "scala-2.11.12二进制包已存在，解压至/opt/module/"
+						fi
+			tar -zxf scala-2.11.12.tgz -C /opt/module && echo "解压成功"
 		else
-			echo "Scala rpm包已存在，直接安装" 
+			echo "/opt/module/scala-2.11.12已存在，跳过scala-2.11.12的下载及解压"
 	fi
-		yum -y install scala-2.12.12.rpm 
-		
-#Scala-2.13.3
-#	if [ ! -f "scala-2.13.3.rpm" ];
-#		then
-#			echo "从Scala官网下载rpm包并安装" && wget https://downloads.lightbend.com/scala/2.13.3/scala-2.13.3.rpm 									
-#		else
-#			echo "Scala rpm包已存在，直接安装" 
-#	fi
-#		yum -y install scala-2.13.3.rpm 
 
+#SCALA-2.12.12
+if [ ! -d "/opt/module/scala-2.12.12" ]; 
+		then
+			echo "/opt/module/scala-2.12.12不存在,查看scala-2.12.12二进制包是否存在"
+						if [ ! -f "scala-2.12.12.tgz" ]; 
+							then
+								echo "scala-2.12.12二进制包不存在，从scala-lang.org(lightbend.com)下载并解压至/opt/module/"
+								wget -c https://downloads.lightbend.com/scala/2.12.12/scala-2.12.12.tgz
+							else
+								echo "scala-2.12.12二进制包已存在，解压至/opt/module/"
+						fi
+			tar -zxf scala-2.12.12.tgz -C /opt/module && echo "解压成功"
+		else
+			echo "/opt/module/scala-2.12.12已存在，跳过scala-2.12.12的下载及解压"
+	fi
+
+#SCALA-2.13.4
+if [ ! -d "/opt/module/scala-2.13.4" ]; 
+		then
+			echo "/opt/module/scala-2.13.4不存在,查看scala-2.13.4二进制包是否存在"
+						if [ ! -f "scala-2.13.4.tgz" ]; 
+							then
+								echo "scala-2.13.4二进制包不存在，从scala-lang.org(lightbend.com)下载并解压至/opt/module/"
+								wget -c https://downloads.lightbend.com/scala/2.13.4/scala-2.13.4.tgz
+							else
+								echo "scala-2.13.4二进制包已存在，解压至/opt/module/"
+						fi
+			tar -zxf scala-2.13.4.tgz -C /opt/module && echo "解压成功"
+		else
+			echo "/opt/module/scala-2.13.4已存在，跳过scala-2.13.4的下载及解压"
+	fi
 
 
 #MAVEN			
@@ -274,6 +303,42 @@ wget -c https://mirrors.tuna.tsinghua.edu.cn/apache/spark/spark-3.0.1/spark-3.0.
 #AZKABAN-3.90.0
 wget -c -O azkaban-3.90.0.tar.gz https://github.com/azkaban/azkaban/archive/3.90.0.tar.gz
 #wget -c -O azkaban-3.90.0.tar.gz https://download.fastgit.org/azkaban/azkaban/archive/3.90.0.tar.gz
+
+#Flink-1.12.0_2.11
+	if [ ! -d "/opt/module/flink-1.12.0_2.11" ]; 
+		then
+			echo "/opt/module/flink-1.12.0_2.11不存在,查看flink-1.12.0_2.11二进制包是否存在"
+						if [ ! -f "flink-1.12.0_2.11.tgz" ]; 
+							then
+								echo "flink-1.12.0_2.11二进制包不存在，从清华源下载并解压至/opt/module/"
+								wget -c http://mirrors.aliyun.com/apache/flink/flink-1.12.0/flink-1.12.0-bin-scala_2.11.tgz
+							else
+								echo "flink-1.12.0_2.11二进制包已存在，解压至/opt/module/"
+						fi
+			tar -zxf flink-1.12.0.tar.gz -C /opt/module && echo "解压成功"
+			mv /opt/module/flink-1.12.0 /opt/module/flink-1.12.0_2.11 && echo "重命名/opt/module/flink-1.12.0为flink-1.12.0_2.11
+		else
+			echo "/opt/module/flink-1.12.0_2.11已存在，跳过flink-1.12.0_2.11的下载及解压"
+	fi
+
+
+#Flink-1.12.0_2.12
+	if [ ! -d "/opt/module/flink-1.12.0_2.12" ]; 
+		then
+			echo "/opt/module/flink-1.12.0_2.12不存在,查看flink-1.12.0_2.12二进制包是否存在"
+						if [ ! -f "flink-1.12.0_2.12.tgz" ]; 
+							then
+								echo "flink-1.12.0_2.12二进制包不存在，从清华源下载并解压至/opt/module/"
+								wget -c http://mirrors.aliyun.com/apache/flink/flink-1.12.0/flink-1.12.0-bin-scala_2.12.tgz
+							else
+								echo "flink-1.12.0_2.12二进制包已存在，解压至/opt/module/"
+						fi
+			tar -zxf flink-1.12.0.tar.gz -C /opt/module && echo "解压成功"
+			mv /opt/module/flink-1.12.0 /opt/module/flink-1.12.0_2.12 && echo "重命名/opt/module/flink-1.12.0为flink-1.12.0_2.12
+		else
+			echo "/opt/module/flink-1.12.0_2.12已存在，跳过flink-1.12.0_2.12的下载及解压"
+	fi
+
 
 #设置环境变量
 if [ ! -f "/etc/profile.d/bigdataenv.sh" ]; 
